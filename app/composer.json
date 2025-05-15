@@ -1,0 +1,16 @@
+{
+        "name": "son/mvc",
+
+        "require": {"php": ">=5.3"},
+
+        "minimus-stability": "alpha",
+
+        "authors": [{"name": "Renan Gaspar", "email": "renan-portnoy@hotmail.com"}],
+
+        "autoload" : {"psr-4": {
+               "FrameworkAula\\": "vendor/FrameworkAULA/", "App":"app"}
+        },
+
+        "config": {"bin-dir": "bin"}
+
+}
