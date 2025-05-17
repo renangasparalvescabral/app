@@ -1,0 +1,6 @@
+<ifModule mod_rewrite.c>   // verifica se o modulo de reescrita esta hablitado
+    RewriteEngine On 
+    RewriteRule ^$ public/[L]
+    RewriteRule (.*) public/$1[L]   // e mostra algumas regras para poder ter acessos a ele!
+</ifModule>
+
