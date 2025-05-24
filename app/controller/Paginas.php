@@ -9,13 +9,19 @@ class Paginas{
         echo $param2;
 
     }
-*/
 
 
 class Paginas extends Controller{
 
     public function index(){
-        $this->view('paginas/home');
+
+        $dados = [
+            'titulos' => 'Paginas Inicial',
+            'descricao' => 'Curso de PHP7'
+        ];
+
+
+        $this->view('paginas/home', $dados);
     }
 
      public function sobre(){
@@ -23,4 +29,19 @@ class Paginas extends Controller{
     }
 
 }
+*/
 
+class Paginas extends Controller{
+
+     public function index(){
+
+    $dados = [
+       'titulo' => 'Minha Página',
+       'conteudo' => 'Bem-vindo ao site!'
+    ];
+
+    $this->view('paginas/home', $dados);
+
+    }
+
+}
