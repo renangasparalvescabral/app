@@ -33,7 +33,7 @@ class Paginas extends Controller{
 
 class Paginas extends Controller{
 
-     public function index(){
+     public function home(){
 
     $dados = [
        'titulo' => 'Minha Página',
@@ -41,6 +41,17 @@ class Paginas extends Controller{
     ];
 
     $this->view('paginas/home', $dados);
+
+    }
+
+    public function sobre(){
+
+    $dados = [
+       'tituloPagina' => 'Pagina sobre nós',
+       
+    ];
+
+    $this->view('paginas/sobre', $dados);
 
     }
 
