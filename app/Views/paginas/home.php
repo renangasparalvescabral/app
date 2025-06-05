@@ -1,4 +1,4 @@
-<h1><?= $dados['titulo'] ?></h1>
-<h1><?= $dados['conteudo'] ?></h1>
+<h1><?='titulo' ?></h1>
+<h1><?='conteudo' ?></h1>
 
 <?= App ?>

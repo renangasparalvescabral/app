@@ -33,26 +33,27 @@ class Paginas extends Controller{
 
 class Paginas extends Controller{
 
-     public function home(){
+    
 
-    $dados = [
-       'titulo' => 'Minha Página',
-       'conteudo' => 'Bem-vindo ao site!'
-    ];
+     public function index(){
 
-    $this->view('paginas/home', $dados);
+        $dados = [
+        'titulo' => 'Minha Página',
+        'conteudo' => 'Bem-vindo ao site!'
+        ];
 
-    }
+        $this->view('paginas/home', $dados);
 
-    public function sobre(){
+        
 
-    $dados = [
-       'tituloPagina' => 'Pagina sobre nós',
-       
-    ];
+        $dados = [
+        'tituloPagina' => 'Pagina sobre nós',
+        
+        ];
 
-    $this->view('paginas/sobre', $dados);
+        $this->view('paginas/sobre', $dados);
 
-    }
+    
+     }
 
 }

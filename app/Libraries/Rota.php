@@ -4,7 +4,7 @@
             *Classe rota
             *Cria as urls, carrega os controladores, metodos e paaramentros
             *Formato url - /controladores/metodos/parametros
-        */
+        */    
 
     class Rota{
 
@@ -30,7 +30,8 @@
             //requere o controlador
             require_once '../app/Controller/'.$this->controlador.'.php';
             //instancia o controlador
-            $this->controlador = new $this->controlador;
+            $controladorNome = $this->controlador;
+            $this->controlador = new $controladorNome;
 
             //checa se o metodo existe, segundo parte da url
             if(isset($url[1])){
@@ -45,6 +46,7 @@
             //se existir retorna um arrey com os valores se nao retorna um array vazio
             //array_exists retorna todos os valores de um array
             $this->parametros = $url ? array_values($url)  : [];
+
             //call_user_func_array chama uma dada funcao de um usuario com um array de parametros
             call_user_func_array([$this->controlador, $this->metodo], $this->parametros);
             
