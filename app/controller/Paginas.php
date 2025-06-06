@@ -38,16 +38,18 @@ class Paginas extends Controller{
      public function index(){
 
         $dados = [
-        'titulo' => 'Minha Página',
-        'conteudo' => 'Bem-vindo ao site!'
+        'titulo' => 'Minha Página'
+        
         ];
 
         $this->view('paginas/home', $dados);
 
-        
+     } 
 
+        public function sobre(){
+     
         $dados = [
-        'tituloPagina' => 'Pagina sobre nós',
+        'tituloPagina' => App_NOME
         
         ];
 
